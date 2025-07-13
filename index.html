@@ -8,7 +8,7 @@
 
 </head>
   <img src="lol.png" alt="Joseph Joestar" class="titulo" id="titulo">
-  <img src="img/joseph_default.png" alt="Joseph Joestar" class="joseph" id="joseph">
+  <img src="joseph_default.png" alt="Joseph Joestar" class="joseph" id="joseph">
   <audio id='audio' src="explo.mp3" preload="none"></audio>
   
   <div id="envelope-container" style="display: none;">
@@ -68,7 +68,7 @@
 
     ignorarBtn.addEventListener('click', () => {
  
-      josephImg.src = 'img/joseph_button.png';
+      josephImg.src = 'joseph_button.png';
       explosion.style.display = 'flex';
       audio.currentTime = 0;
       audio.play();
@@ -76,7 +76,7 @@
         setTimeout(() => {
           explosion.style.display = 'none';
           ignorarBtn.style.display = 'none';
-        josephImg.src = 'img/joseph_default.png';
+        josephImg.src = 'joseph_default.png';
     }, 800);
      
     });
