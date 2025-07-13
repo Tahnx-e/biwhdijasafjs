@@ -86,9 +86,9 @@
   left: 0;
   width: 0;
   height: 0;
-  border-left: 15vh solid transparent;
-  border-right: 15vh solid transparent;
-  border-bottom: 9vh solid #47303c; 
+  border-left: 138px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 90px solid #47303c; 
   rotate: 180deg;
   opacity: 0;
   z-index: 1;
