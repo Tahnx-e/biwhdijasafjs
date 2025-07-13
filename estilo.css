@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url(/img/background.jpg);
+    background-image: url(background.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,21 +50,21 @@
 .pregunta {
   display: flex;
   justify-content: center;
-  gap: 100px; /* espacio entre botones */
+  gap: 100px; 
   margin-top: 50px;
 }
 
 .boton-con-gif {
-  position: relative; /* ¡clave! el gif se posicionará encima de este botón */
+  position: relative; 
 }
 
 .gif {
   position: absolute;
-  top: -80px; /* ajusta según tamaño del gif */
+  top: -80px; 
   left: 50%;
   transform: translateX(-50%);
   width: 150px;
-  pointer-events: none; /* para que no bloquee clics al botón */
+  pointer-events: none; 
   z-index: 10;
 }
 
