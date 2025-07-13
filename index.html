@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>3</title>
+
+  <link rel="stylesheet" href="estilo.css">
+
+</head>
+  <img src="lol.png" alt="Joseph Joestar" class="titulo" id="titulo">
+  <img src="img/joseph_default.png" alt="Joseph Joestar" class="joseph" id="joseph">
+  <audio id='audio' src="explo.mp3" preload="none"></audio>
+  
+  <div id="envelope-container" style="display: none;">
+  <div class="envelope">
+  <div class="flap"></div>
+  <div class="inside"></div>
+  <div class="abrir" id="abrir"></div>
+  </div>
+  </div>
+
+
+ <div class="pregunta">
+  <button class="A">Aceptar</button>
+  <div class="boton-con-gif">
+    <button class="B">Ignorar</button>
+    <img src="explo.gif" alt="gif" class="gif" id="gif" style="display: none;">
+  </div>
+</div>
+
+
+  <script>
+    const aceptarBtn = document.querySelector('.A');
+    const ignorarBtn = document.querySelector('.B');
+    const josephImg = document.getElementById('joseph');
+    const explosion = document.getElementById('gif');
+    const audio = document.getElementById('audio');
+    const titulo = document.getElementById('titulo');
+    const abrirobj = document.getElementById('abrir');
+
+    aceptarBtn.addEventListener('click', () => {
+
+    aceptarBtn.style.display = 'none';
+    ignorarBtn.style.display = 'none';
+    titulo.style.display = 'none';
+    josephImg.style.display = 'none';
+    const envelopeContainer = document.getElementById('envelope-container');
+    const envelope = envelopeContainer.querySelector('.envelope');
+
+  envelopeContainer.style.display = 'block';
+
+  envelope.classList.add('shake');
+
+  setTimeout(() => {
+  envelope.classList.remove('shake');
+  envelope.classList.add('open');
+
+  abrirobj.classList.add('fade-out');
+
+ 
+  setTimeout(() => {
+    const popup = document.getElementById('carta-popup');
+    popup.classList.add('mostrar');
+  }, 500); 
+  
+}, 700);
+    });
+
+    ignorarBtn.addEventListener('click', () => {
+ 
+      josephImg.src = 'img/joseph_button.png';
+      explosion.style.display = 'flex';
+      audio.currentTime = 0;
+      audio.play();
+
+        setTimeout(() => {
+          explosion.style.display = 'none';
+          ignorarBtn.style.display = 'none';
+        josephImg.src = 'img/joseph_default.png';
+    }, 800);
+     
+    });
+
+ 
+  </script>
+
+
+<div id="carta-popup" class="popup">
+
+  <div class="popup-content">
+  <div class="container">
+      
+     <img src="letter.jpg" alt="letter" class="carta">
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
